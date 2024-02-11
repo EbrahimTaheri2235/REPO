@@ -1,5 +1,5 @@
 import { FC } from "react";
-import Button from "../components/Button";
+import Button from "../../components/Button";
 
 const VerifyCode: FC = () => {
   return (

@@ -1,6 +1,6 @@
 import { FC } from "react";
-import Button from "../components/Button";
-import TextField from "./../components/TextField";
+import Button from "../../components/Button";
+import TextField from "../../components/TextField";
 
 const LoginPage: FC = () => {
   return (

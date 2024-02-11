@@ -1,6 +1,6 @@
 import { FC } from "react";
-import Button from "../components/Button";
-import Textfield from "./../components/TextField";
+import Button from "../../components/Button";
+import Textfield from "../../components/TextField";
 
 const CompleteProfile: FC = () => {
   return (

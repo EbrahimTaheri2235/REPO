@@ -1,10 +1,14 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import AuthLayout from "./components/AuthLayout";
-import LoginPage from "./pages/LoginPage";
-import SignUp from "./pages/SignUp";
-import VerifyCode from "./pages/VerifyCode";
-import NewPassword from "./pages/ChangePassword";
-import CompleteProfile from "./pages/CompleteProfile";
+import LoginPage from "./pages/auth/LoginPage";
+import SignUp from "./pages/auth/SignUp";
+import VerifyCode from "./pages/auth/VerifyCode";
+import NewPassword from "./pages/auth/ChangePassword";
+import CompleteProfile from "./pages/auth/CompleteProfile";
+import PaymentLayout from "./components/PaymentLayout";
+import PaymentMethod from "./pages/payment/PaymentMethod";
+import AddCard from "./pages/payment/AddCard";
+import ReviewSummary from "./pages/payment/Review";
 
 const router = createBrowserRouter([
   {
@@ -24,13 +28,31 @@ const router = createBrowserRouter([
         element: <VerifyCode />,
       },
       {
-        path:"/auth/newpassword",
-        element:<NewPassword/>
+        path: "/auth/newpassword",
+        element: <NewPassword />,
       },
       {
-        path:"/auth/completeprofile",
-        element:<CompleteProfile/>
-      }
+        path: "/auth/completeprofile",
+        element: <CompleteProfile />,
+      },
+    ],
+  },
+  {
+    path: "/payment",
+    element: <PaymentLayout />,
+    children: [
+      {
+        path: "/payment/method",
+        element: <PaymentMethod />,
+      },
+      {
+        path: "/payment/addcard",
+        element: <AddCard />,
+      },
+      {
+        path: "/payment/review",
+        element: <ReviewSummary />,
+      },
     ],
   },
 ]);
